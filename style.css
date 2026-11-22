@@ -1,0 +1,95 @@
+/* Custom Styles & Futuristic Glow Effects */
+
+@keyframes floatHero {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.28;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes glowBorder {
+  0%, 100% {
+    border-color: rgba(168, 85, 247, 0.25);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+  }
+  50% {
+    border-color: rgba(168, 85, 247, 0.55);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
+  }
+}
+
+.hero-floating-box {
+  animation: floatHero 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 8s ease-in-out infinite;
+}
+
+/* Glass Card Container */
+.main-card-container {
+  box-shadow: 0 20px 80px -15px rgba(10, 5, 30, 0.9), 
+              0 0 0 1px rgba(139, 92, 246, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 5, 26, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.6);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Active Mode Pill Glow */
+.mode-pill.active {
+  box-shadow: 0 0 18px rgba(147, 51, 234, 0.5);
+}
+
+/* Topic Card Hover Glow */
+.topic-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.topic-card:hover {
+  box-shadow: 0 10px 30px -5px rgba(139, 92, 246, 0.35), 
+              0 0 0 1px rgba(192, 132, 252, 0.5);
+}
+
+/* Feature Card Hover Effect */
+.feature-card {
+  transition: all 0.25s ease-out;
+}
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -4px rgba(139, 92, 246, 0.25),
+              0 0 0 1px rgba(168, 85, 247, 0.4);
+}
